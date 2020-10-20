@@ -1,3 +1,3 @@
 # PinkDolphin
 
-https://bigsurface.github.io/PinkDolphin/
+https://bigsurface.github.io/PinkDolphin/index.html
