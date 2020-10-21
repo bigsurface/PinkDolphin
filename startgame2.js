@@ -27,7 +27,7 @@ function setup() {
   scoreElem.style('color', 'black');
   scoreElem.style('background-color', 'gold');
 
-  bg = loadImage('img/reilly.jpg');
+  bg = loadImage('img/Reilly.jpg');
 
   createCanvas(500, 500);
   frameRate(15);
