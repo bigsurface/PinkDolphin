@@ -13,21 +13,27 @@ let yFruit = 0;
 let scoreElem;
 
 let bg;
+let counter = 0;
 
 const numImgs = 30;
 const imgPaths = Array.from({ length: numImgs });
-        imgPaths.forEach((e,i) => {
-            imgPaths[i]=`img/${i}.jpg`;
-            });
+
+function preload(){
+        imgs.forEach((image,i) => {
+                imgs[i] = loadImage(`img/${i}.jpg`);
+        });
+}
 
 function setup() {
+  setInterval(changeImage, 1000);
+  console.log(imgs);
   scoreElem = createDiv('Score = 0');
   scoreElem.position(610, 200);
   scoreElem.id = 'score';
   scoreElem.style('color', 'black');
   scoreElem.style('background-color', 'pink');
 
-  bg = loadImage('img/0.jpg');
+  bg = imgs[0];
 
   createCanvas(500, 500);
   frameRate(15);
@@ -43,6 +49,7 @@ function setup() {
 }
 
 function draw() {
+  bg = imgs[counter]
   background(bg);
   for (let i = 0; i < numSegments - 1; i++) {
     line(xCor[i], yCor[i], xCor[i + 1], yCor[i + 1]);
@@ -50,8 +57,13 @@ function draw() {
   updateSnakeCoordinates();
   checkGameStatus();
   checkForFruit();
+}
 
-
+function changeImage(){
+        if(counter < numImgs){
+                counter ++
+        } else {
+        }
 }
 
 /*
