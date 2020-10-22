@@ -16,7 +16,7 @@ let bg;
 let counter = 0;
 
 const numImgs = 30;
-const imgPaths = Array.from({ length: numImgs });
+const imgs = Array.from({ length: numImgs });
 
 function preload(){
         imgs.forEach((image,i) => {
